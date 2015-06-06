@@ -75,11 +75,12 @@
             android:name=".GalleryActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_gallery"
-            android:theme="@style/FullscreenTheme" >
-        </activity>
-        <activity
-            android:name=".GalleryFragment"
-            android:label="@string/title_activity_gallery_fragment" >
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.example.owner.fishyfish.GalleryActivityFragment" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

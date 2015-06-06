@@ -7,37 +7,13 @@
     tools:context="com.example.owner.fishyfish.UserInputActivityFragment"
     tools:showIn="@layout/activity_user_input">
     <EditText
-        android:hint="First and Last Name"
+        android:hint="Fish Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:inputType="text|" />
-<<<<<<< HEAD
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Fish Name"
-        android:id="@+id/textView2"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Estimate of School Size"
-        android:id="@+id/textView"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp" />
-=======
->>>>>>> dcce10942d721150572b22952f1b5ebc4b1bba77
 
     <EditText
         android:hint="Esimate of School Size"

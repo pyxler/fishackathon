@@ -1,6 +1,7 @@
 package com.example.owner.fishyfish;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -60,11 +61,14 @@ public class MainActivity extends ActionBarActivity
         Fragment fragment = null;
         switch (position) {
             case 1:
-                fragment = GalleryActivityFragment.newInstance(position);
+                Intent intent = new Intent("com.example.owner.fishyfish.GalleryActivityFragment");
+                startActivity(intent);
                 break;
             case 2:
                 fragment = UserInputActivityFragment.newInstance(position);
                 break;
+            case 3:
+                fragment = CameraFragment.newInstance(position);
             default:
                 break;
         }
