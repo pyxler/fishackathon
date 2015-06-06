@@ -20,7 +20,6 @@ public class UserInputActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         System.out.println("started");
         return inflater.inflate(R.layout.fragment_user_input, container, false);
-
     }
 
 

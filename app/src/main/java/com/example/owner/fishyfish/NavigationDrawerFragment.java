@@ -282,22 +282,4 @@ public class NavigationDrawerFragment extends Fragment {
          */
         void onNavigationDrawerItemSelected(int position);
     }
-
-    public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment;
-        FragmentManager fragmentManager = getFragmentManager(); // For AppCompat use getSupportFragmentManager
-        switch(position) {
-            default:
-            case 0:
-                fragment = new MainActivity.PlaceholderFragment();
-                break;
-            case 2:
-                fragment = new UserInputActivityFragment();
-                break;
-        }
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
-    }
 }

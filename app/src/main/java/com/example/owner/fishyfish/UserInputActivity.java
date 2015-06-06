@@ -1,17 +1,25 @@
 package com.example.owner.fishyfish;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.FragmentManager;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 
-public class UserInputActivity extends ActionBarActivity {
+public class UserInputActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_input);
+        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
+        String[] items = new String[]{"Fish", "Jellyfish", "Whale", "Dolphin"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
+        dropdown.setAdapter(adapter);
     }
 
 
@@ -35,5 +43,23 @@ public class UserInputActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onNavigationDrawerItemSelected(int position) {
+        // update the main content by replacing fragments
+        Fragment fragment;
+        FragmentManager fragmentManager = getFragmentManager(); // For AppCompat use getSupportFragmentManager
+        switch(position) {
+            default:
+            case 0:
+                fragment = new Fragment();
+                break;
+            case 2:
+                fragment = new Fragment();
+                break;
+        }
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
     }
 }
