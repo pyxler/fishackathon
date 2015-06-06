@@ -1,5 +1,6 @@
 package com.example.owner.fishyfish;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,8 +12,11 @@ import android.view.ViewGroup;
  * A placeholder fragment containing a simple view.
  */
 public class UserInputActivityFragment extends Fragment {
+    private static final String ARG_SECTION_NUMBER = "section_number";
 
-    public UserInputActivityFragment() {
+    public UserInputActivityFragment () {
+
+
     }
 
     @Override
@@ -20,6 +24,13 @@ public class UserInputActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         System.out.println("started");
         return inflater.inflate(R.layout.fragment_user_input, container, false);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        ((MainActivity) activity).onSectionAttached(
+                getArguments().getInt(ARG_SECTION_NUMBER));
     }
 
 
