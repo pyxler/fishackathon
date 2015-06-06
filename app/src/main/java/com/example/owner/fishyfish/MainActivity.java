@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity
         Fragment fragment = null;
         switch (position) {
             case 2:
-                fragment = new UserInputActivityFragment();
+                fragment = UserInputActivityFragment.newInstance(position);
                 break;
             default:
                 break;
