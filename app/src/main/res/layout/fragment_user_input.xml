@@ -11,11 +11,9 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:layout_alignParentCentre="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:inputType="text|"
-        android:layout_toEndOf="@+id/textView" />
+        android:inputType="text|" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -74,9 +72,10 @@
         android:layout_toEndOf="@+id/textView3" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/SpinnerCategoryType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:entries="@array/categorylist"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         android:layout_centerVertical="true"
@@ -101,12 +100,12 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/editText4"
-        android:layout_below="@+id/spinner1"
+        android:layout_below="@+id/SpinnerCategoryType"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="34dp"
-        android:layout_alignLeft="@+id/spinner1"
-        android:layout_alignStart="@+id/spinner1" />
+        android:layout_alignLeft="@+id/SpinnerCategoryType"
+        android:layout_alignStart="@+id/SpinnerCategoryType" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 
-public class UserInputActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class UserInputActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,21 +45,4 @@ public class UserInputActivity extends ActionBarActivity implements NavigationDr
         return super.onOptionsItemSelected(item);
     }
 
-    public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
-        Fragment fragment;
-        FragmentManager fragmentManager = getFragmentManager(); // For AppCompat use getSupportFragmentManager
-        switch(position) {
-            default:
-            case 0:
-                fragment = new Fragment();
-                break;
-            case 2:
-                fragment = new Fragment();
-                break;
-        }
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
-    }
 }
