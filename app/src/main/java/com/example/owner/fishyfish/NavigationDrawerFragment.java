@@ -1,5 +1,6 @@
 package com.example.owner.fishyfish;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
@@ -105,8 +106,8 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section1),
                         getString(R.string.title_section2),
                         getString(R.string.title_section3),
-                        "Categories",
-                        "User",
+                        getString(R.string.title_section4),
+                        getString(R.string.title_section5),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -280,5 +281,23 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+    public void onNavigationDrawerItemSelected(int position) {
+        // update the main content by replacing fragments
+        Fragment fragment;
+        FragmentManager fragmentManager = getFragmentManager(); // For AppCompat use getSupportFragmentManager
+        switch(position) {
+            default:
+            case 0:
+                fragment = new MainActivity.PlaceholderFragment();
+                break;
+            case 2:
+                fragment = new UserInputActivityFragment();
+                break;
+        }
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
     }
 }
