@@ -16,7 +16,7 @@ public class UserInputActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_input);
-        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
+        Spinner dropdown = (Spinner)findViewById(R.id.SpinnerCategoryType);
         String[] items = new String[]{"Fish", "Jellyfish", "Whale", "Dolphin"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
         dropdown.setAdapter(adapter);
