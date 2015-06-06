@@ -59,6 +59,9 @@ public class MainActivity extends ActionBarActivity
 
         Fragment fragment = null;
         switch (position) {
+            case 1:
+                fragment = GalleryActivityFragment.newInstance(position);
+                break;
             case 2:
                 fragment = UserInputActivityFragment.newInstance(position);
                 break;

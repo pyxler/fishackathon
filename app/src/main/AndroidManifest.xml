@@ -54,7 +54,7 @@
                 <category android:name="com.example.gcm" />
             </intent-filter>
         </receiver>
-<!--
+        <!--
         <service
             android:name="com.example.MyGcmListenerService"
             android:exported="false" >
@@ -70,6 +70,16 @@
             </intent-filter>
         </service>
         -->
+        <activity
+            android:name=".GalleryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_gallery"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name=".GalleryFragment"
+            android:label="@string/title_activity_gallery_fragment" >
+        </activity>
     </application>
 
 </manifest>
