@@ -59,8 +59,11 @@ public class MainActivity extends ActionBarActivity
 
         Fragment fragment = null;
         switch (position) {
+            case 1:
+                fragment = GalleryActivityFragment.newInstance(position);
+                break;
             case 2:
-                fragment = new UserInputActivityFragment();
+                fragment = UserInputActivityFragment.newInstance(position);
                 break;
             default:
                 break;
@@ -86,10 +89,10 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
-                mTitle = "Categories";
+                mTitle = getString(R.string.title_section4);
                 break;
             case 5:
-                mTitle = "User";
+                mTitle = getString(R.string.title_section5);
                 break;
         }
     }
@@ -168,6 +171,8 @@ public class MainActivity extends ActionBarActivity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
+
     }
 
 }
