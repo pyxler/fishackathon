@@ -1,7 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.owner.fishyfish.CameraFragment"
-    android:background="#5a7ce8ff">
+    android:layout_height="match_parent" tools:context="com.example.owner.fishyfish.CameraFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,15 +17,13 @@
         android:layout_height="wrap_content"
         android:text="Take Picture!"
         android:id="@+id/buttonTakePicture"
-        android:layout_gravity="left|bottom"
-        android:background="#c874ff89" />
+        android:layout_gravity="left|bottom" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload!"
         android:id="@+id/buttonUpload"
-        android:layout_gravity="right|bottom"
-        android:background="#c874ff89"/>
+        android:layout_gravity="right|bottom" />
 
 </FrameLayout>

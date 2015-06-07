@@ -1,6 +1,9 @@
 package com.example.owner.fishyfish;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -48,8 +51,8 @@ public class GalleryActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.activity_gallery, container, false);
+        final View v = inflater.inflate(R.layout.activity_gallery, null);
+        return v;
 
     }
 
@@ -86,8 +89,7 @@ public class GalleryActivity extends Fragment {
 
         {
 
-            case R.id.image1: im.setImageResource(R.drawable.im1);
-
+            case R.id.image1:im.setImageResource(R.drawable.im1);
                 break;
 
             case R.id.image2: im.setImageResource(R.drawable.im2);

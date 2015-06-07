@@ -2,8 +2,8 @@
     <string name="app_name">FishyFish</string>
 
     <string name="title_section1">Explore</string>
-    <string name="title_section2">Gallery</string>
-    <string name="title_section3">User</string>
+    <string name="title_section2">User</string>
+    <string name="title_section3">Gallery</string>
     <string name="title_section4">Upload</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

@@ -5,15 +5,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.owner.fishyfish.UserInputActivityFragment"
-    tools:showIn="@layout/activity_user_input"
-    android:background="#5a7ce8ff">
+    tools:showIn="@layout/activity_user_input">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#5a7ce8ff">
+        android:layout_height="fill_parent">
 
         <EditText
             android:hint="Fish Name"
@@ -72,7 +70,7 @@
             android:paddingTop="30dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:backgroundTint="#c874ff89" />
+            android:backgroundTint="@color/common_signin_btn_text_dark" />
 
         <EditText
             android:hint="Date: mm/dd/yyyy"
@@ -97,7 +95,7 @@
             android:layout_alignEnd="@+id/editText4"
             android:onClick="@string/accept"
             android:layout_gravity="right"
-            android:background="#c874ff89" />
+            android:background="@color/background_floating_material_dark" />
     </LinearLayout>
 
 </RelativeLayout>
