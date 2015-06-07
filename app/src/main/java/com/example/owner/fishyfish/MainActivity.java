@@ -60,9 +60,13 @@ public class MainActivity extends ActionBarActivity
 
         Fragment fragment = null;
         switch (position) {
+            case 0:
+                Intent intent0 = new Intent("com.example.owner.fishyfish.MapsActivity");
+                startActivity(intent0);
+                break;
             case 1:
-                Intent intent = new Intent("com.example.owner.fishyfish.GalleryActivityFragment");
-                startActivity(intent);
+                Intent intent1 = new Intent("com.example.owner.fishyfish.GalleryActivity");
+                startActivity(intent1);
                 break;
             case 2:
                 fragment = UserInputActivityFragment.newInstance(position);
@@ -93,9 +97,6 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
-                mTitle = getString(R.string.title_section4);
-                break;
-            case 5:
                 mTitle = getString(R.string.title_section5);
                 break;
         }
