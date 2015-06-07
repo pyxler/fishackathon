@@ -14,9 +14,12 @@ import android.view.ViewGroup;
 public class UserInputActivityFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    public UserInputActivityFragment () {
-
-
+    public static UserInputActivityFragment newInstance(int sectionNumber) {
+        UserInputActivityFragment fragment = new UserInputActivityFragment();
+        Bundle args = new Bundle();
+        args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override

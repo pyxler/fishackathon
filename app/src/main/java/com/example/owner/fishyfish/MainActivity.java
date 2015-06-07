@@ -1,6 +1,7 @@
 package com.example.owner.fishyfish;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -59,9 +60,15 @@ public class MainActivity extends ActionBarActivity
 
         Fragment fragment = null;
         switch (position) {
-            case 2:
-                fragment = new UserInputActivityFragment();
+            case 1:
+                Intent intent = new Intent("com.example.owner.fishyfish.GalleryActivityFragment");
+                startActivity(intent);
                 break;
+            case 2:
+                fragment = UserInputActivityFragment.newInstance(position);
+                break;
+            case 3:
+                fragment = CameraFragment.newInstance(position);
             default:
                 break;
         }
@@ -86,10 +93,10 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
-                mTitle = "Categories";
+                mTitle = getString(R.string.title_section4);
                 break;
             case 5:
-                mTitle = "User";
+                mTitle = getString(R.string.title_section5);
                 break;
         }
     }
@@ -168,6 +175,8 @@ public class MainActivity extends ActionBarActivity
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
+
     }
 
 }
