@@ -3,8 +3,8 @@
 
     <string name="title_section1">Explore</string>
     <string name="title_section2">Gallery</string>
-    <string name="title_section3">Upload</string>
-    <string name="title_section4">User</string>
+    <string name="title_section3">User</string>
+    <string name="title_section4">Upload</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,5 +29,6 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_camera">CameraActivity</string>
 
 </resources>

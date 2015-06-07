@@ -20,7 +20,7 @@ public class MapsActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        latlon.add(new LatLng(20.005611, -155.834368));
+       latlon.add(new LatLng(20.005611, -155.834368));
         latlon.add(new LatLng(20.005611, -160.834368));
         latlon.add(new LatLng(25.005611, -160.834368));
         latlon.add(new LatLng(20.005611, -155.834368));

@@ -60,19 +60,19 @@ public class MainActivity extends ActionBarActivity
 
         Fragment fragment = null;
         switch (position) {
-            case 0:
+            case 1:
                 Intent intent0 = new Intent("com.example.owner.fishyfish.MapsActivity");
                 startActivity(intent0);
                 break;
-            case 1:
-                Intent intent1 = new Intent("com.example.owner.fishyfish.GalleryActivity");
-                startActivity(intent1);
-                break;
             case 2:
-                fragment = UserInputActivityFragment.newInstance(position);
+                fragment = GalleryActivity.newInstance(position);
                 break;
             case 3:
                 fragment = CameraFragment.newInstance(position);
+                break;
+            case 4:
+                fragment = UserInputActivityFragment.newInstance(position);
+                break;
             default:
                 break;
         }
@@ -81,7 +81,6 @@ public class MainActivity extends ActionBarActivity
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.container, fragment).commit();
-
         }
     }
 

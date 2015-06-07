@@ -25,7 +25,6 @@ public class UserInputActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        System.out.println("started");
         return inflater.inflate(R.layout.fragment_user_input, container, false);
     }
 

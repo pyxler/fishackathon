@@ -1,28 +1,32 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.owner.fishyfish.CameraFragment">
+    android:layout_height="match_parent" tools:context="com.example.owner.fishyfish.CameraFragment"
+    android:background="#5a7ce8ff">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="400dp"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal|top"
-        android:focusableInTouchMode="true" />
+        android:focusableInTouchMode="true"
+        android:paddingTop="30dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TakePicture"
+        android:text="Take Picture!"
         android:id="@+id/buttonTakePicture"
-        android:layout_gravity="left|bottom" />
+        android:layout_gravity="left|bottom"
+        android:background="#c874ff89" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload!"
         android:id="@+id/buttonUpload"
-        android:layout_gravity="right|bottom" />
+        android:layout_gravity="right|bottom"
+        android:background="#c874ff89"/>
 
 </FrameLayout>
